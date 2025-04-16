@@ -21,7 +21,7 @@
         </style>
         <title>Trabajos Higiene Urbana</title>
         <!-- Icono -->
-        <link rel="icon" href="./images/favicon1.ico">
+       <link rel="icon" href="./images/favicon1.ico">
     </head>
     <body>
         <div id="map">
@@ -153,6 +153,21 @@
                 interactive: true,
             }
                     break;
+                case 'Realizado':
+                    return {
+                pane: 'pane_TrabajoHigieneUrbana_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(18,86,7,1.0)',
+                interactive: true,
+            }
+                    break;
             }
         }
         map.createPane('pane_TrabajoHigieneUrbana_1');
@@ -170,7 +185,7 @@
         bounds_group.addLayer(layer_TrabajoHigieneUrbana_1);
         map.addLayer(layer_TrabajoHigieneUrbana_1);
         var overlaysTree = [
-            {label: 'Trabajo Higiene Urbana<br /><table><tr><td style="text-align: center;"><img src="legend/TrabajoHigieneUrbana_1_SemanaPlanificada0.png" /></td><td>Semana Planificada</td></tr><tr><td style="text-align: center;"><img src="legend/TrabajoHigieneUrbana_1_SinPlanificar1.png" /></td><td>Sin Planificar</td></tr></table>', layer: layer_TrabajoHigieneUrbana_1},
+            {label: 'Trabajo Higiene Urbana<br /><table><tr><td style="text-align: center;"><img src="legend/TrabajoHigieneUrbana_1_SemanaPlanificada0.png" /></td><td>Semana Planificada</td></tr><tr><td style="text-align: center;"><img src="legend/TrabajoHigieneUrbana_1_SinPlanificar1.png" /></td><td>Sin Planificar</td></tr><tr><td style="text-align: center;"><img src="legend/TrabajoHigieneUrbana_1_Realizado2.png" /></td><td>Realizado</td></tr></table>', layer: layer_TrabajoHigieneUrbana_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0, radioGroup: 'bm' },]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
